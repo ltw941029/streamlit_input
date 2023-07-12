@@ -14,19 +14,19 @@ st.markdown(":green[$\sqrt{x^2+y^2}=1$] 피타고라스 항등식이다. :pencil
 
 
 st.title('이것은 제목입니다', anchor='https://docs.streamlit.io/library/api-reference/text/st.title' ,help='anchor 존재') 
-st.title('이것은 제목입니다', anchor=None ,help='anchor ') 
+st.title('이것은 제목입니다', anchor=None) 
 
 st.title('이것은 제목입니다.')
 st.title('_이탤릭체 제목_ :blue[파랑색] 그리고 선글라스 이모지 :sunglasses:')
 
 st.header('이것은 헤더입니다', anchor='https://docs.streamlit.io/library/api-reference/text/st.header' ,help='anchor 존재') 
-st.header('이것은 헤입니다', anchor=None ,help='anchor ') 
+st.header('이것은 헤더입니다', anchor=None) 
 
 st.header('이것은 헤더입니다.')
 st.header('_이탤릭체 헤더_ :red[빨강색] 그리고 선글라스 이모지 :sunglasses:')
 
-st.subheader('이것은 헤더입니다', anchor='https://docs.streamlit.io/library/api-reference/text/st.subheader' ,help='anchor 존재') 
-st.subheader('이것은 헤입니다', anchor=None ,help='anchor ') 
+st.subheader('이것은 서브헤더입니다', anchor='https://docs.streamlit.io/library/api-reference/text/st.subheader' ,help='anchor 존재') 
+st.subheader('이것은 서브헤더입니다', anchor=None) 
 
 st.subheader('이것은 서브헤더입니다.')
 st.subheader('_이탤릭체 서브헤더_ :red[빨강색] 그리고 선글라스 이모지 :sunglasses:')
@@ -45,12 +45,12 @@ st.caption('_이탤릭체 캡션_ :blue[파랑색] 그리고 이모티콘 :sungl
 st.code('import streamlit as st', language="python", line_numbers=True)
 st.code('import streamlit as st', language="python", line_numbers=False)
 
-code = '''def 안녕():
+code = '''def text():
     print("안녕, Streamlit!")'''
-st.code(code, language='python')
+st.code(code, language="python")
 
-st.text('이것은 텍스트이다', help='텍스트의 헬프')
-st.text('이것은 텍스트이다.')
+st.text('이것은 텍스트입니다', help='help')
+st.text('이것은 텍스트입니다.')
 
 st.latex(r'''
     a + ar + a r^2 + a r^3
@@ -64,10 +64,18 @@ st.latex(r'''
 
 
 
-st.write("텍스트.")
+st.title("이것은 title입니다.")
+st.header("이것은 header입니다.")
+st.subheader("이것은 subheader입니다.")
+
 st.divider()
-st.slider("Slider", 0, 100, (25, 75))
-st.divider()  
-st.write("st.divider() 사이의 텍스트.")
+
+code = '''def text():
+    print("안녕, Streamlit!")'''
+st.code(code, language="python")
+
 st.divider()  
 
+st.latex(r'''a + ar + a r^2 + a r^3''', help="3차 방정식")
+
+st.divider()  
